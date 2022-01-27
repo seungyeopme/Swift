@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                                 <connections>
-                                    <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Ib-nA-qdS"/>
+                                    <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Sd-y0-ywj"/>
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택시간:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLG-Sd-4Va">
@@ -43,9 +43,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="IblCurrentTime" destination="1fa-P8-3vF" id="6oj-QI-m06"/>
-                        <outlet property="lblCurrentTime" destination="1fa-P8-3vF" id="gr3-Ot-ewD"/>
-                        <outlet property="lblPickerTime" destination="pLG-Sd-4Va" id="mFP-Gh-iUP"/>
+                        <outlet property="lblCurrentTime" destination="1fa-P8-3vF" id="bMe-Xv-Mb1"/>
+                        <outlet property="lblPickerTime" destination="pLG-Sd-4Va" id="puX-Wt-hXH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
