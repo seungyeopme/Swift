@@ -11,6 +11,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     let MAX_ARRAY_NUM = 10
     let PICKER_VIEW_COLUMN = 1
+    let PICKER_VIEW_HEIGHT:CGFloat = 80
     var imageArray = [UIImage?] ()
     var imageFileName = [ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg" ]
     @IBOutlet var pickerImage: UIPickerView!
@@ -35,13 +36,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return PICKER_VIEW_COLUMN
     }
     
+    // returns height of row for each component.
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return PICKER_VIEW_HEIGHT
+    }
+    
     // returns the # of rows in each component..
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return imageFileName.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return imageFileName[row]
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return imageFileName[row]
+//    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let imageView = UIImageView(image:imageArray[row])
+        imageView.frame = CGRect(x: 0, y:0, width: 100, height: 150)
+        
+        return imageView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
