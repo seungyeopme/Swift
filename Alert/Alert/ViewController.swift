@@ -42,6 +42,23 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func btnLampOff(_ sender: UIButton) {
+        if isLampOn {
+            // 전구가 켜져 있을 경우
+            // 전구를 끌 것인지를 묻는 Alert을 실행
+            // if(isLampOn==true)로 작성해도 무방
+            let lampOffAlert = UIAlertController(title: "램프 끄기", message: "램프를 끄시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+            
+            let offAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default, handler: {
+                ACTION in self.lampImg.image = self.imgOff
+                self.isLampOn=false
+            })
+            let cancelAction = UIAlertAction(title: "아니오", style: UIAlertAction.Style.default, handler: nil)
+            
+            lampOffAlert.addAction(offAction)
+            lampOffAlert.addAction(cancelAction)
+            
+            present(lampOffAlert, animated: true, completion: nil)
+        }
     }
     @IBAction func btnLampRemove(_ sender: UIButton) {
     }
