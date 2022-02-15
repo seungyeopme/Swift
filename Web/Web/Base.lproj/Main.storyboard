@@ -99,6 +99,11 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="bRf-ad-iMc" id="2MI-dD-6YC"/>
+                        <outlet property="myWebView" destination="ljn-55-Byp" id="CoQ-G2-JqB"/>
+                        <outlet property="txtUrl" destination="kkr-JT-TMm" id="0Qv-XS-GmV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
