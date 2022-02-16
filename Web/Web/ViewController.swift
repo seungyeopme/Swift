@@ -18,7 +18,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBAction func btnGotoUrl(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnGoSite1(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnGoSite2(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
+    }
+    
+    
+    
+    
 }
 
