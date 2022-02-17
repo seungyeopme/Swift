@@ -50,6 +50,9 @@
                                 <rect key="frame" x="227" y="102" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="HTML"/>
+                                <connections>
+                                    <action selector="btnLoadHtmlString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaE-TR-Oex"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZh-3E-Zeo">
                                 <rect key="frame" x="336" y="102" width="30" height="30"/>
@@ -68,43 +71,41 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWL-pf-0rq">
-                                <rect key="frame" x="16" y="700" width="72" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Jrb-7d-tEP"/>
-                                    <barButtonItem systemItem="stop" id="qJb-ye-5tY"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nvH-qE-qlg"/>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDX-wg-bbJ">
-                                <rect key="frame" x="119" y="700" width="72" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem systemItem="refresh" id="HWf-wZ-9k5"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kpT-Ds-igJ"/>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tpc-5J-ly3">
-                                <rect key="frame" x="212" y="700" width="72" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem systemItem="rewind" id="zon-3D-n7Q"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bCG-RI-Jkk"/>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-z6-xT6">
-                                <rect key="frame" x="302" y="700" width="72" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Item" systemItem="fastForward" id="mBd-DE-QRj"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="U9v-HS-gZJ"/>
-                                </items>
-                            </toolbar>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="bRf-ad-iMc">
                                 <rect key="frame" x="185" y="405" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFj-kr-kxp">
+                                <rect key="frame" x="0.0" y="723" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2aN-qo-oFx"/>
+                                    <barButtonItem title="Item" systemItem="stop" id="Qqg-cf-78P">
+                                        <connections>
+                                            <action selector="btnStop:" destination="BYZ-38-t0r" id="91Q-Zq-z4Y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PtS-Mt-2Qn"/>
+                                    <barButtonItem title="Item" systemItem="refresh" id="zhy-YE-RcT">
+                                        <connections>
+                                            <action selector="btnReload:" destination="BYZ-38-t0r" id="I19-C9-01x"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="r7X-ib-cLB"/>
+                                    <barButtonItem title="Item" systemItem="rewind" id="AYW-Lf-aEL">
+                                        <connections>
+                                            <action selector="btnGoBack:" destination="BYZ-38-t0r" id="tfE-OM-Bzt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qpu-qy-ztf"/>
+                                    <barButtonItem title="Item" systemItem="fastForward" id="k52-om-l20">
+                                        <connections>
+                                            <action selector="btnGoForward:" destination="BYZ-38-t0r" id="t8D-Wg-uhq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FW3-rV-hkI"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

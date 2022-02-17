@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func btnGotoUrl(_ sender: UIButton) {
     }
     
@@ -27,11 +28,22 @@ class ViewController: UIViewController {
     @IBAction func btnGoSite2(_ sender: UIButton) {
     }
     
+    @IBAction func btnLoadHtmlString(_ sender: UIButton) {
+    }
+    
     @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
     }
     
+    @IBAction func btnStop(_ sender: UIBarButtonItem) {
+    }
     
+    @IBAction func btnReload(_ sender: UIBarButtonItem) {
+    }
     
+    @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
+    }
     
+    @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
+    }
 }
 
