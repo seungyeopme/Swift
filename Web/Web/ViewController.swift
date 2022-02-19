@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet var txtUrl: UITextField!
     @IBOutlet var myWebView: WKWebView!
@@ -23,7 +23,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        myWebView.navigationDelegate = self
         loadWebPage("http://seungyeop.me")
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.isHidden = false
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
     }
     
     @IBAction func btnGotoUrl(_ sender: UIButton) {
