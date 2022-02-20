@@ -46,9 +46,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     @IBAction func btnGoSite1(_ sender: UIButton) {
+        loadWebPage("http://naver.com")
     }
     
     @IBAction func btnGoSite2(_ sender: UIButton) {
+        loadWebPage("http://google.com")
     }
     
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
