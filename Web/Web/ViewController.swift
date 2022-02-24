@@ -42,7 +42,19 @@ class ViewController: UIViewController, WKNavigationDelegate {
         myActivityIndicator.isHidden = true
     }
     
+    func checkUrl(_ url: String) -> String {
+        var strUrl = url
+        let flag = strUrl.hasPrefix("http://")
+        if !flag {
+            strUrl = "http://" + strUrl
+        }
+        return strUrl
+    }
+    
     @IBAction func btnGotoUrl(_ sender: UIButton) {
+        let myUrl = checkUrl(txtUrl.text!)
+        txtUrl.text = ""
+        loadWebPage(myUrl)
     }
     
     @IBAction func btnGoSite1(_ sender: UIButton) {
