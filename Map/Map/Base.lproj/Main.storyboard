@@ -24,6 +24,9 @@
                                     <segment title="종각역"/>
                                     <segment title="가산디지털단지역"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sgChangeLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cyp-nE-XJz"/>
+                                </connections>
                             </segmentedControl>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gst-gt-xxW">
                                 <rect key="frame" x="16" y="83" width="358" height="626"/>
@@ -47,6 +50,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="lblLocationInfo1" destination="Tyw-ko-wv9" id="zfu-B2-pei"/>
+                        <outlet property="lblLocationInfo2" destination="Tyw-ko-wv9" id="i5F-q4-mxH"/>
+                        <outlet property="myMap" destination="gst-gt-xxW" id="m5Y-BH-b86"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
