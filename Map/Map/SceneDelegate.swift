@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Map
 //
-//  Created by seungyeop on 2022/02/26.
+//  Created by BeomGeun Lee on 2020/11/03.
 //
 
 import UIKit
