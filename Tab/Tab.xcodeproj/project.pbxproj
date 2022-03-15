@@ -13,6 +13,10 @@
 		6AB92E6A27DE90B600895EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB92E6827DE90B600895EE1 /* Main.storyboard */; };
 		6AB92E6C27DE90B900895EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB92E6B27DE90B900895EE1 /* Assets.xcassets */; };
 		6AB92E6F27DE90B900895EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB92E6D27DE90B900895EE1 /* LaunchScreen.storyboard */; };
+		6AB92E7927E0170D00895EE1 /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AB92E7727E0170D00895EE1 /* lamp_off.png */; };
+		6AB92E7A27E0170D00895EE1 /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AB92E7827E0170D00895EE1 /* lamp_on.png */; };
+		6AB92E7D27E017BC00895EE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB92E7C27E017BC00895EE1 /* ImageViewController.swift */; };
+		6AB92E8027E01A5800895EE1 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB92E7F27E01A5800895EE1 /* DateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6AB92E6B27DE90B900895EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB92E6E27DE90B900895EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AB92E7027DE90B900895EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AB92E7727E0170D00895EE1 /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
+		6AB92E7827E0170D00895EE1 /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
+		6AB92E7C27E017BC00895EE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		6AB92E7F27E01A5800895EE1 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,13 @@
 		6AB92E6127DE90B600895EE1 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
+				6AB92E7727E0170D00895EE1 /* lamp_off.png */,
+				6AB92E7827E0170D00895EE1 /* lamp_on.png */,
 				6AB92E6227DE90B600895EE1 /* AppDelegate.swift */,
 				6AB92E6427DE90B600895EE1 /* SceneDelegate.swift */,
 				6AB92E6627DE90B600895EE1 /* ViewController.swift */,
+				6AB92E7C27E017BC00895EE1 /* ImageViewController.swift */,
+				6AB92E7F27E01A5800895EE1 /* DateViewController.swift */,
 				6AB92E6827DE90B600895EE1 /* Main.storyboard */,
 				6AB92E6B27DE90B900895EE1 /* Assets.xcassets */,
 				6AB92E6D27DE90B900895EE1 /* LaunchScreen.storyboard */,
@@ -126,7 +138,9 @@
 			files = (
 				6AB92E6F27DE90B900895EE1 /* LaunchScreen.storyboard in Resources */,
 				6AB92E6C27DE90B900895EE1 /* Assets.xcassets in Resources */,
+				6AB92E7A27E0170D00895EE1 /* lamp_on.png in Resources */,
 				6AB92E6A27DE90B600895EE1 /* Main.storyboard in Resources */,
+				6AB92E7927E0170D00895EE1 /* lamp_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB92E8027E01A5800895EE1 /* DateViewController.swift in Sources */,
 				6AB92E6727DE90B600895EE1 /* ViewController.swift in Sources */,
 				6AB92E6327DE90B600895EE1 /* AppDelegate.swift in Sources */,
+				6AB92E7D27E017BC00895EE1 /* ImageViewController.swift in Sources */,
 				6AB92E6527DE90B600895EE1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
