@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A6EAA8727E15E68004112CF /* File.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A6EAA8627E15E68004112CF /* File.png */; };
 		6AB92E6327DE90B600895EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB92E6227DE90B600895EE1 /* AppDelegate.swift */; };
 		6AB92E6527DE90B600895EE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB92E6427DE90B600895EE1 /* SceneDelegate.swift */; };
 		6AB92E6727DE90B600895EE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB92E6627DE90B600895EE1 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A6EAA8627E15E68004112CF /* File.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = File.png; sourceTree = "<group>"; };
 		6AB92E5F27DE90B600895EE1 /* Tab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB92E6227DE90B600895EE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB92E6427DE90B600895EE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				6AB92E7727E0170D00895EE1 /* lamp_off.png */,
 				6AB92E7827E0170D00895EE1 /* lamp_on.png */,
+				6A6EAA8627E15E68004112CF /* File.png */,
 				6AB92E6227DE90B600895EE1 /* AppDelegate.swift */,
 				6AB92E6427DE90B600895EE1 /* SceneDelegate.swift */,
 				6AB92E6627DE90B600895EE1 /* ViewController.swift */,
@@ -139,6 +142,7 @@
 				6AB92E6F27DE90B900895EE1 /* LaunchScreen.storyboard in Resources */,
 				6AB92E6C27DE90B900895EE1 /* Assets.xcassets in Resources */,
 				6AB92E7A27E0170D00895EE1 /* lamp_on.png in Resources */,
+				6A6EAA8727E15E68004112CF /* File.png in Resources */,
 				6AB92E6A27DE90B600895EE1 /* Main.storyboard in Resources */,
 				6AB92E7927E0170D00895EE1 /* lamp_off.png in Resources */,
 			);
