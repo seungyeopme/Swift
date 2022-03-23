@@ -15,13 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uiu-b3-P8C">
+                                <rect key="frame" x="304" y="88" width="86" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="수정"/>
+                                <connections>
+                                    <segue destination="ZEX-eQ-t8m" kind="show" id="Ij3-b4-NRD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="메인화면" id="BRz-Kf-ceh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="agh-MU-0eq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="UaN-KN-T5z">
                             <connections>
-                                <segue destination="ZEX-eQ-t8m" kind="show" id="pqc-O8-0rL"/>
+                                <segue destination="ZEX-eQ-t8m" kind="show" identifier="editBarButton" id="YEf-pP-jWd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -37,6 +47,20 @@
                     <view key="view" contentMode="scaleToFill" id="Gj6-Ka-oSf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgh-QM-0Mn">
+                                <rect key="frame" x="0.0" y="88" width="272" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijx-kB-NeU">
+                                <rect key="frame" x="304" y="88" width="86" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="완료"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kFE-bW-PcM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -44,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHQ-5b-vzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1829" y="124"/>
+            <point key="canvasLocation" x="1974" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ky6-fz-iZI">
@@ -65,6 +89,9 @@
             <point key="canvasLocation" x="140" y="123.69668246445497"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ij3-b4-NRD"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
