@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="수정"/>
                                 <connections>
-                                    <segue destination="ZEX-eQ-t8m" kind="show" id="Ij3-b4-NRD"/>
+                                    <segue destination="ZEX-eQ-t8m" kind="show" identifier="editButton" id="Ij3-b4-NRD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,7 +43,7 @@
         <!--수정화면-->
         <scene sceneID="VEy-l0-mK2">
             <objects>
-                <viewController id="ZEX-eQ-t8m" sceneMemberID="viewController">
+                <viewController id="ZEX-eQ-t8m" customClass="EditViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gj6-Ka-oSf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,12 +59,18 @@
                                 <rect key="frame" x="304" y="88" width="86" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="btnDone:" destination="ZEX-eQ-t8m" eventType="touchUpInside" id="lDM-xo-kdJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kFE-bW-PcM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="수정화면" id="e05-IS-rX2"/>
+                    <connections>
+                        <outlet property="lblWay" destination="Vgh-QM-0Mn" id="XDy-SH-QTS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHQ-5b-vzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
