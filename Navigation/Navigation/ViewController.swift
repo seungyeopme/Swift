@@ -7,8 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, EditDelegate {
 
+    
+
+    @IBOutlet var txMessage: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,6 +27,12 @@ class ViewController: UIViewController {
         // 바 버튼을 클릭한 경우
             editViewController.textWayValue = "segue : use Bar button"
         }
+        editViewController.textMessage = txMessage.text!
+        editViewController.delegate = self
+    }
+    
+    func didMessageEditDone(_ controller: EditViewController, message: String) {
+        txMessage.text = message
     }
 
 }
