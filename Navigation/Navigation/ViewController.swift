@@ -12,6 +12,7 @@ class ViewController: UIViewController, EditDelegate {
     
 
     @IBOutlet var txMessage: UITextField!
+    @IBOutlet var imgView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
