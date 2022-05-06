@@ -60,14 +60,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC1-dh-kjV">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="btnPlayAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Keg-g5-zQK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgD-IH-33n">
                                                 <rect key="frame" x="116" y="0.0" width="42" height="30"/>
                                                 <state key="normal" title="Pause"/>
+                                                <connections>
+                                                    <action selector="btnPauseAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BP2-yu-b1Z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57h-LV-ATp">
                                                 <rect key="frame" x="244" y="0.0" width="32" height="30"/>
                                                 <state key="normal" title="Stop"/>
+                                                <connections>
+                                                    <action selector="btnStopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lZI-5S-G9y"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -85,6 +94,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="eCs-2q-VTg"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="slChangeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="IMk-Dr-p17"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -98,6 +110,15 @@
                             <constraint firstItem="ZKJ-h8-4V5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o2k-lU-jQt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnPause" destination="FgD-IH-33n" id="FkE-qg-ocX"/>
+                        <outlet property="btnPlay" destination="PC1-dh-kjV" id="zdr-b6-kFh"/>
+                        <outlet property="btnStop" destination="57h-LV-ATp" id="CdS-SB-zYz"/>
+                        <outlet property="lblCurrentTime" destination="Xcq-E4-okO" id="bJi-q2-vaF"/>
+                        <outlet property="lblEndTime" destination="a7u-kI-LHp" id="FkF-Ki-ogE"/>
+                        <outlet property="pvProgressPlay" destination="4Ng-gi-ni5" id="gJJ-Ha-gEl"/>
+                        <outlet property="slVolume" destination="kAf-Ow-IIS" id="7q4-DU-8g5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
