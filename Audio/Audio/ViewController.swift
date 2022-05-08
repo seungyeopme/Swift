@@ -51,6 +51,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         audioPlayer.prepareToPlay()
         audioPlayer.volume = slVolume.value
         
+        lblEndTime.text = convertNSTimeInterval2String(audioPlayer.duration)
+        lblCurrentTime.text = convertNSTimeInterval2String(0)
+        
+    }
+    
+    func convertNSTimeInterval2String(_ time:TimeInterval) -> String {
+        let min = Int(time/60)
+        let sec = Int(time.truncatingRemainder(dividingBy: 60))
+        let strTime = String(format: "%02d:%02d", min, sec)
+        return strTime
     }
 
 
