@@ -53,7 +53,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         lblEndTime.text = convertNSTimeInterval2String(audioPlayer.duration)
         lblCurrentTime.text = convertNSTimeInterval2String(0)
-        
+        setPlayButtons(true, pause: false, stop: false)
+//        btnPlay.isEnabled = true
+//        btnPause.isEnabled = false
+//        btnStop.isEnabled = false
+    }
+    
+    func setPlayButtons(_ play:Bool, pause:Bool, stop:Bool) {
+        btnPlay.isEnabled = play
+        btnPause.isEnabled = pause
+        btnStop.isEnabled = stop
     }
     
     func convertNSTimeInterval2String(_ time:TimeInterval) -> String {
@@ -65,10 +74,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
 
     @IBAction func btnPlayAudio(_ sender: UIButton) {
+        audioPlayer.play()
+        setPlayButtons(false, pause: true, stop: true)
     }
     @IBAction func btnPauseAudio(_ sender: UIButton) {
+        audioPlayer.pause()
+        setPlayButtons(true, pause: false, stop: true)
     }
     @IBAction func btnStopAudio(_ sender: UIButton) {
+        audioPlayer.stop()
+        setPlayButtons(true, pause: false, stop: false)
     }
     @IBAction func slChangeVolume(_ sender: UISlider) {
     }
