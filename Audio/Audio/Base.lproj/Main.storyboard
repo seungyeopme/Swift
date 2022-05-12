@@ -116,6 +116,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ns1-Rz-kmb">
                                                 <rect key="frame" x="64" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="swRecordMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="q65-rr-eij"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -125,6 +128,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRy-NZ-sRO">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
                                                 <state key="normal" title="Record"/>
+                                                <connections>
+                                                    <action selector="btnRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CkD-su-p2Z"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcT-OW-HzJ">
                                                 <rect key="frame" x="67" y="0.0" width="46" height="30"/>
@@ -149,9 +155,11 @@
                     <connections>
                         <outlet property="btnPause" destination="FgD-IH-33n" id="FkE-qg-ocX"/>
                         <outlet property="btnPlay" destination="PC1-dh-kjV" id="zdr-b6-kFh"/>
+                        <outlet property="btnRecord" destination="iRy-NZ-sRO" id="RSG-Y1-8nZ"/>
                         <outlet property="btnStop" destination="57h-LV-ATp" id="CdS-SB-zYz"/>
                         <outlet property="lblCurrentTime" destination="Xcq-E4-okO" id="bJi-q2-vaF"/>
                         <outlet property="lblEndTime" destination="a7u-kI-LHp" id="FkF-Ki-ogE"/>
+                        <outlet property="lblRecordTime" destination="wcT-OW-HzJ" id="1zU-18-ICz"/>
                         <outlet property="pvProgressPlay" destination="4Ng-gi-ni5" id="gJJ-Ha-gEl"/>
                         <outlet property="slVolume" destination="kAf-Ow-IIS" id="7q4-DU-8g5"/>
                     </connections>
