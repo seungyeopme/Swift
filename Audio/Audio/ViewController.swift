@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
     var audioPlayer : AVAudioPlayer!
     var audioFile : URL!
@@ -32,13 +32,63 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet var btnRecord: UIButton!
     @IBOutlet var lblRecordTime: UILabel!
     
+    var audioRecorder : AVAudioRecorder!
+    var isRecordMode = false
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioFile = Bundle.main.url(forResource: "Sicilian_Breeze", withExtension: "mp3")
-        initPlay()
         // Do any additional setup after loading the view.
+//        audioFile = Bundle.main.url(forResource: "Sicilian_Breeze", withExtension: "mp3")
+        selectAudioFile()
+        if !isRecordMode {
+            initPlay()
+            btnRecord.isEnabled = false
+            lblRecordTime.isEnabled = false
+        } else {
+            initRecord()
+        }
+    }
+    
+    func selectAudioFile() {
+        if !isRecordMode {
+            audioFile = Bundle.main.url(forResource: "Sicilian_Breeze", withExtension: "mp3")
+        } else {
+            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            audioFile = documentDirectory.appendingPathComponent("recordFile.m4a")
+        }
+    }
+    
+    func initRecord() {
+        let recordSettings = [
+        AVFormatIDKey : NSNumber(value: kAudioFormatAppleLossless as UInt32), AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue, AVEncoderBitRateKey : 320000, AVNumberOfChannelsKey : 2, AVSampleRateKey : 44100.0] as [String : Any]
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFile, settings: recordSettings)
+        } catch let error as NSError {
+            print("Error-initRecord : \(error)")
+        }
+        
+        audioRecorder.delegate = self
+        
+        slVolume.value = 1.0
+        audioPlayer.volume = slVolume.value
+        lblEndTime.text = convertNSTimeInterval2String(0)
+        lblCurrentTime.text = convertNSTimeInterval2String(0)
+        setPlayButtons(false, pause: false, stop: false)
+        
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let error as NSError {
+            print("Error-setCategory : \(error)")
+        }
+        do {
+            try session.setActive(true)
+        } catch let error as NSError {
+            print(" Error-setActive : \(error)")
+        }
     }
     
     func initPlay() {
