@@ -178,6 +178,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     }
     
     @IBAction func btnRecord(_ sender: UIButton) {
+        if (sender as AnyObject).titleLabel?.text == "Record" {
+            audioRecorder.record()
+            (sender as AnyObject).setTitle("Stop", for: UIControl.State())
+        } else {
+            audioRecorder.stop()
+            (sender as AnyObject).setTitle("Record", for: UIControl.State())
+            btnPlay.isEnabled = true
+            initPlay()
+        }
     }
     
 }
