@@ -32,6 +32,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="YkX-ew-6ey"/>
                                                 </constraints>
                                                 <state key="normal" title="사진 촬영"/>
+                                                <connections>
+                                                    <action selector="btnCaptureImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZl-qh-IOO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjc-HA-vcy">
                                                 <rect key="frame" x="179" y="0.0" width="179" height="40"/>
@@ -39,6 +42,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="OrO-14-waw"/>
                                                 </constraints>
                                                 <state key="normal" title="비디오 촬영"/>
+                                                <connections>
+                                                    <action selector="btnRecordVideoFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNG-Zn-8Nd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -51,6 +57,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="NVq-bx-kr0"/>
                                                 </constraints>
                                                 <state key="normal" title="사진 불러오기"/>
+                                                <connections>
+                                                    <action selector="btnLoadImageFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgZ-FL-IfK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUa-oY-pGD">
                                                 <rect key="frame" x="179" y="0.0" width="179" height="40"/>
@@ -58,6 +67,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="VDQ-YT-2XU"/>
                                                 </constraints>
                                                 <state key="normal" title="비디오 불러오기"/>
+                                                <connections>
+                                                    <action selector="btnLoadVideoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u71-5Y-fTz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -73,6 +85,9 @@
                             <constraint firstItem="DUz-1j-V4H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e9r-N3-4ZR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="IGR-4E-F8x" id="G1D-9o-O0o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
