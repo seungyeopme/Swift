@@ -109,9 +109,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="txtMessage" destination="4Js-oR-RKP" id="6VE-Kh-va4"/>
-                        <outlet property="txtTabCount" destination="qWf-2P-G0q" id="d7h-rx-REb"/>
-                        <outlet property="txtTouchCount" destination="wf6-V7-nI1" id="5Wv-1f-gWd"/>
+                        <outlet property="txtMessage" destination="4Js-oR-RKP" id="QeE-zd-fFc"/>
+                        <outlet property="txtTapCount" destination="qWf-2P-G0q" id="Iy0-Ff-1Jv"/>
+                        <outlet property="txtTouchCount" destination="wf6-V7-nI1" id="tQh-kp-987"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
