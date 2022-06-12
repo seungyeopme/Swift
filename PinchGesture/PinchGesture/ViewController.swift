@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var txtPinch: UILabel!
+//    @IBOutlet var txtPinch: UILabel!
+    @IBOutlet var imgPinch: UIImageView!
     
     var initialFontSize:CGFloat!
     

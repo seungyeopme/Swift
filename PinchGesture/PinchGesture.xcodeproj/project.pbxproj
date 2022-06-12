@@ -13,6 +13,7 @@
 		6A2CCD6928545756009F8CFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2CCD6728545756009F8CFD /* Main.storyboard */; };
 		6A2CCD6B28545759009F8CFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A2CCD6A28545759009F8CFD /* Assets.xcassets */; };
 		6A2CCD6E28545759009F8CFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2CCD6C28545759009F8CFD /* LaunchScreen.storyboard */; };
+		6A3CC3F82855A1B400F99132 /* img-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A3CC3F72855A1B400F99132 /* img-06.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6A2CCD6A28545759009F8CFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A2CCD6D28545759009F8CFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A2CCD6F28545759009F8CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A3CC3F72855A1B400F99132 /* img-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-06.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		6A2CCD6028545756009F8CFD /* PinchGesture */ = {
 			isa = PBXGroup;
 			children = (
+				6A3CC3F72855A1B400F99132 /* img-06.png */,
 				6A2CCD6128545756009F8CFD /* AppDelegate.swift */,
 				6A2CCD6328545756009F8CFD /* SceneDelegate.swift */,
 				6A2CCD6528545756009F8CFD /* ViewController.swift */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A2CCD6E28545759009F8CFD /* LaunchScreen.storyboard in Resources */,
+				6A3CC3F82855A1B400F99132 /* img-06.png in Resources */,
 				6A2CCD6B28545759009F8CFD /* Assets.xcassets in Resources */,
 				6A2CCD6928545756009F8CFD /* Main.storyboard in Resources */,
 			);

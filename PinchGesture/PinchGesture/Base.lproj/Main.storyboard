@@ -16,24 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imR-k4-s3s">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-06.png" translatesAutoresizingMaskIntoConstraints="NO" id="a1N-2h-6yk">
                                 <rect key="frame" x="16" y="44" width="358" height="766"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="imR-k4-s3s" secondAttribute="trailing" constant="16" id="CJC-OR-k81"/>
-                            <constraint firstItem="imR-k4-s3s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mas-UM-lIX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="imR-k4-s3s" secondAttribute="bottom" id="Pdv-eW-6nj"/>
-                            <constraint firstItem="imR-k4-s3s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fvN-Cr-nEV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a1N-2h-6yk" secondAttribute="trailing" constant="16" id="CiM-Yj-vmK"/>
+                            <constraint firstItem="a1N-2h-6yk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cz6-p7-Egv"/>
+                            <constraint firstItem="a1N-2h-6yk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ooh-dj-26J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a1N-2h-6yk" secondAttribute="bottom" id="PDh-Rt-rdi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="txtPinch" destination="imR-k4-s3s" id="axN-Tf-pos"/>
+                        <outlet property="imgPinch" destination="a1N-2h-6yk" id="soh-af-V32"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,6 +39,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="img-06.png" width="1686" height="2448"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
