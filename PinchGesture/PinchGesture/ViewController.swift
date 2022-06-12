@@ -21,11 +21,15 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(pinch)
     }
     
+//    @objc func doPinch(_ pinch: UIPinchGestureRecognizer) {
+//        if (pinch.state == UIGestureRecognizer.State.began) {
+//            initialFontSize = txtPinch.font.pointSize
+//        } else {
+//            txtPinch.font = txtPinch.font.withSize(initialFontSize * pinch.scale)
+//        }
+//    }
     @objc func doPinch(_ pinch: UIPinchGestureRecognizer) {
-        if (pinch.state == UIGestureRecognizer.State.began) {
-            initialFontSize = txtPinch.font.pointSize
-        } else {
-            txtPinch.font = txtPinch.font.withSize(initialFontSize * pinch.scale)
-        }
+        imgPinch.transform = imgPinch.transform.scaledBy(x: pinch.scale, y: pinch.scale)
+        pinch.scale = 1
     }
 }
