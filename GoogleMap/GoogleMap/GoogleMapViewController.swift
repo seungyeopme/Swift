@@ -44,7 +44,7 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate, CLLocationM
     var mapView: GMSMapView!
     //GPS座標オブジェクト
     var locationManager = CLLocationManager()
-    //緯度、経度値から行政住所（東京都江戸川区東葛西）に置き換えるクラス
+    //緯度、経度値から行政住所（東京都新宿区西新宿）に置き換えるクラス
     var geocoder = GMSGeocoder()
 
     override func viewDidLoad() {
@@ -56,9 +56,9 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate, CLLocationM
     
     func initMapView() {
         mapView = GMSMapView()
-        // カメラ設定:全マップの一部画面を意味
-        // 東葛西　：　35.66277751529612, 139.88032630984225
-        let camera = GMSCameraPosition.camera(withLatitude: 35.66277, longitude: 139.88032, zoom: 15)
+        //カメラ設定:全マップの一部画面を意味
+        //東京都庁　：　35.68977719010659, 139.69200566679217
+        let camera = GMSCameraPosition.camera(withLatitude: 35.68977, longitude: 139.69200, zoom: 15)
         mapView.camera = camera
         // 現在の位置を示す青い丸いアイコン
         mapView.settings.myLocationButton = true
@@ -69,10 +69,25 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate, CLLocationM
     }
     
     func initLocationManager() {
-        
+        //GPS座標取得の活性化
+        //GPS座標誤差範囲:10メートル~100メートル
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        //位置情報使用時ポップアップアラーム使用
+        locationManager.requestWhenInUseAuthorization()
+        //位置情報を持ってくるスタート！ 遅延ディレー 5秒
+        locationManager.startUpdatingLocation()
     }
     
-
-   
-
+    //位置がアップデートされるたびに呼び出される関数
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let coordi = manager.location?.coordinate {
+            print("緯度:", String(coordi.latitude))
+            print("経度", String(coordi.longitude))
+            
+            //位置が変わったため、GoogleMapの中心位置を移す。
+            let camera = GMSCameraPosition.camera(withLatitude: coordi.latitude, longitude: coordi.longitude, zoom: 15)
+            
+        }
+    }
 }
