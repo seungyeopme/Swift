@@ -87,6 +87,11 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate, CLLocationM
             
             //位置が変わったため、GoogleMapの中心位置を移す。
             let camera = GMSCameraPosition.camera(withLatitude: coordi.latitude, longitude: coordi.longitude, zoom: 15)
+            mapView?.camera = camera
+            //Googleマップをスムーズに移動させる
+            mapView?.animate(to: camera)
+            
+
             
         }
     }
