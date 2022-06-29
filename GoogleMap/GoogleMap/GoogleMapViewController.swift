@@ -90,9 +90,35 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate, CLLocationM
             mapView?.camera = camera
             //Googleマップをスムーズに移動させる
             mapView?.animate(to: camera)
-            
-
-            
+        }
+    }
+    
+    //Googleマップにマーカー(ピン)を表示する。
+    var marker = GMSMarker()
+    
+    //Googleマップを移動すると、既存のマーカーを一度消してくれる。
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        //マーカー消し
+        mapView.clear()
+    }
+    
+    //Googleマップに移動してから停止した後に呼び出される関数
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        //ジオコーダを利用して、緯度、経度値を行政アドレスに変換できる。
+        geocoder.reverseGeocodeCoordinate(position.target){
+            //後行クローザーでコードブロックを入れる。
+            (response, error) in
+            guard error == nil else {
+                return;
+            }
+            //正常呼出
+            if let result = response?.firstResult() {
+                let marker = GMSMarker()
+                marker.position = position.target
+                marker.title = "東京グルメ"
+                marker.snippet = result.lines?[0] //行政住所を付加情報として追加する。
+                marker.map = mapView
+            }
         }
     }
 }
