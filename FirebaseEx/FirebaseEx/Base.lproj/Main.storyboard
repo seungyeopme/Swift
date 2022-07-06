@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ログイン状態: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj1-tH-wCW">
-                                <rect key="frame" x="20" y="88" width="139" height="26"/>
+                                <rect key="frame" x="20" y="88" width="374" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -80,6 +80,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="kph-bj-mzD"/>
+                    <connections>
+                        <outlet property="labelLogin" destination="aj1-tH-wCW" id="dUR-W1-Reu"/>
+                        <outlet property="textfieldID" destination="SM2-KV-637" id="oKJ-Xi-fuL"/>
+                        <outlet property="textfieldPW" destination="RUg-60-fuL" id="kMG-TG-IiC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

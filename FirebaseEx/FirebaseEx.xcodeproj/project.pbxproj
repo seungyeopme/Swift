@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A9CC69F287570E6006648C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A9CC69E287570E6006648C5 /* GoogleService-Info.plist */; };
 		6AB059462872AE9C00BD1F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB059452872AE9C00BD1F5E /* AppDelegate.swift */; };
 		6AB059482872AE9C00BD1F5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB059472872AE9C00BD1F5E /* SceneDelegate.swift */; };
 		6AB0594A2872AE9C00BD1F5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB059492872AE9C00BD1F5E /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A9CC69E287570E6006648C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6AB059422872AE9C00BD1F5E /* FirebaseEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB059452872AE9C00BD1F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB059472872AE9C00BD1F5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				6AB0594E2872AE9F00BD1F5E /* Assets.xcassets */,
 				6AB059502872AE9F00BD1F5E /* LaunchScreen.storyboard */,
 				6AB059532872AE9F00BD1F5E /* Info.plist */,
+				6A9CC69E287570E6006648C5 /* GoogleService-Info.plist */,
 			);
 			path = FirebaseEx;
 			sourceTree = "<group>";
@@ -80,7 +83,6 @@
 				8F1879D84EF7BCF5F05549D0 /* Pods-FirebaseEx.debug.xcconfig */,
 				AA8B45E412A4633EDBB01A8B /* Pods-FirebaseEx.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB059522872AE9F00BD1F5E /* LaunchScreen.storyboard in Resources */,
+				6A9CC69F287570E6006648C5 /* GoogleService-Info.plist in Resources */,
 				6AB0594F2872AE9F00BD1F5E /* Assets.xcassets in Resources */,
 				6AB0594D2872AE9C00BD1F5E /* Main.storyboard in Resources */,
 			);

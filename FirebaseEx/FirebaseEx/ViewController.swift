@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 //Cocoa Pod 이용하기
 //CLI(Command Line Interface) : DOS창, 터미널 창
@@ -34,11 +36,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelLogin: UILabel!
+    @IBOutlet weak var textfieldID: UITextField!
+    @IBOutlet weak var textfieldPW: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
+        updateUI()
     }
 
+    func updateUI() {
+        if let user = Auth.auth().currentUser {
+            // Loginされた状態(Session対応-自動ログイン対応)
+            labelLogin.text = "ログイン状態: \(user.email!)"
+        } else {
+            // Logoutされた状態
+            labelLogin.text = "ログイン状態: ログアウト"
+        }
+    }
 
 }
 
