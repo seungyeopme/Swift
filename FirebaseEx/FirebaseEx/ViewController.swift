@@ -49,12 +49,35 @@ class ViewController: UIViewController {
     func updateUI() {
         if let user = Auth.auth().currentUser {
             // Loginされた状態(Session対応-自動ログイン対応)
-            labelLogin.text = "ログイン状態: \(user.email!)"
+            labelLogin.text = "Login状態: \(user.email!)にLogin"
         } else {
             // Logoutされた状態
-            labelLogin.text = "ログイン状態: ログアウト"
+            labelLogin.text = "Login状態: ログアウト"
         }
     }
-
+    @IBAction func onBtnLogin(_ sender: UIButton) {
+        if let textID = textfieldID.text, let textPW = textfieldPW.text {
+            
+            if textID.count < 1 || textPW.count < 1 {
+                print("IDやパスワードが短いです")
+                return
+            }
+            Auth.auth().signIn(withEmail: textID, password: textPW) {
+                //後行クローザー
+                [weak self] user, error in
+                guard let _ = self else { return }
+                print("ログインできました")
+                
+                let user = Auth.auth().currentUser
+                print("\(String(describing: user?.email)), \(String(describing: user?.uid))")
+                
+                self?.updateUI()
+                
+            }
+        } else {
+            print("ログインアカウントまたはパスワードをご確認ください");
+        }
+    }
+    
 }
 
