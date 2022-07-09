@@ -64,6 +64,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="会員加入する">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnJoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVN-u6-0sJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPY-Ue-Wa8">
                                 <rect key="frame" x="87" y="470" width="241" height="66"/>

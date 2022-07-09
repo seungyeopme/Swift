@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             
             if textID.count < 1 || textPW.count < 1 {
                 print("IDやパスワードが短いです")
-                return
+                return;
             }
             Auth.auth().signIn(withEmail: textID, password: textPW) {
                 //後行クローザー
@@ -88,7 +88,17 @@ class ViewController: UIViewController {
         }
         
         updateUI()
-        
     }
+    @IBAction func onBtnJoin(_ sender: UIButton) {
+        if let textID = textfieldID.text, let textPW = textfieldPW.text {
+            if textID.count < 1 || textPW.count < 1 {
+                print("IDやパスワードが短いです")
+                return;
+            }
+        } else {
+            print("IDやパスワードがありません")
+        }
+    }
+    
 }
 
