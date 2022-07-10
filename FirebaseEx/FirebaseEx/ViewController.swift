@@ -95,10 +95,21 @@ class ViewController: UIViewController {
                 print("IDやパスワードが短いです")
                 return;
             }
+            
+            Auth.auth().createUser(withEmail: textID, password: textPW) {
+                //後行クローザー
+                authResult, error in
+                guard let user = authResult?.user, error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                //会員加入成功
+                print("\(String(describing: user.email)) 会員加入成功")
+                print("\(user.uid)会員加入成功")
+                
+            }
         } else {
             print("IDやパスワードがありません")
         }
     }
-    
 }
-
