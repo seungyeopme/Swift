@@ -75,6 +75,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="リストビューFirestore">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ukt-Vw-jz4" kind="show" id="duE-TR-Mld"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-Sl-Rzu">
                                 <rect key="frame" x="35" y="527" width="345" height="66"/>
@@ -97,7 +100,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="128.57142857142856"/>
+            <point key="canvasLocation" x="852" y="129"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Anm-36-J41">
+            <objects>
+                <viewController id="ukt-Vw-jz4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oeY-5s-xWL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2xb-L8-4DK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KDz-5L-d4k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THi-R8-LUg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rQ4-yK-JCv">
