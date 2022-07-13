@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class ListViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
+    
+    struct IdolData {
+        var name: String = ""
+        var imageString: String = ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
