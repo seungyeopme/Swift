@@ -48,7 +48,24 @@ class ListViewController: UIViewController {
     func readListData() {
         let db = Firestore.firestore()
         
-        db.collection("idols").whereField("name", isEqualTo: "Matsumoto Jun")
+        db.collection("idols").whereField("name", isEqualTo: "Matsumoto Jun").getDocuments() {
+            //後行クローザー
+            (QuerySnapshot, err) in
+            if let error = err {
+                print("読み取りエラー発生", error.localizedDescription)
+                self.textView.text.append("\n読み取りエラー発生")
+            } else {
+                for document in QuerySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    
+                    let dataDic = document.data() as NSDictionary
+                    let name = dataDic["name"] as? String ?? "이름없음"
+                    let imageString = dataDic["imageString"] as? String ?? "イメージなし"
+                    
+                }
+            }
+            
+        }
     }
     
     
