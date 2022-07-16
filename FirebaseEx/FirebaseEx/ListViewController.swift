@@ -62,6 +62,18 @@ class ListViewController: UIViewController {
                     let name = dataDic["name"] as? String ?? "이름없음"
                     let imageString = dataDic["imageString"] as? String ?? "イメージなし"
                     
+                    //構造体でデータを入れる
+                    var idol = IdolData()
+                    idol.name = name
+                    idol.imageString = imageString
+                    self.idolArray.append( idol )
+                }
+                
+                for idol in self.idolArray {
+                    self.textView.text.append("\n\(idol.name)")
+                    self.textView.text.append("\n\(idol.imageString)")
+                    
+                    
                 }
             }
             
