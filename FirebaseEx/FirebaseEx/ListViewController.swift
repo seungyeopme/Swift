@@ -39,16 +39,41 @@ class ListViewController: UIViewController {
         
     }
     @IBAction func onBtnAdd(_ sender: UIButton) {
+        addListData()
     }
     
     @IBAction func onBtnRead(_ sender: UIButton) {
         readListData()
     }
     
+    func addListData() {
+        var idol = IdolData()
+        idol.name = "Aiba Masaki"
+        idol.imageString = "image3.png"
+        //DBにアクセスしながらDictionaryに変換
+        let idolDic = idol.getDic()
+        //DB 連動
+        let db = Firestore.firestore()
+        
+        var ref: DocumentReference? = nil
+        ref = db.collection("idols").addDocument(data: idolDic) {
+            //後行クローザー
+            err in
+            if let error = err {
+                print("書き込みエラー発生:", error)
+                self.textView.text.append("\n書き込みエラー発生")
+            }else {
+                print("ドキュメント書き出し成功")
+                print("ドキュメント ID: ", ref!.documentID)
+                self.textView.text.append("\nドキュメント書き出し成功")
+            }
+        }
+    }
+    
     func readListData() {
         let db = Firestore.firestore()
         
-        db.collection("idols").whereField("name", isEqualTo: "Matsumoto Jun").getDocuments() {
+        db.collection("idols").whereField("name", isEqualTo: "Aiba Masaki").getDocuments() {
             //後行クローザー
             (QuerySnapshot, err) in
             if let error = err {
