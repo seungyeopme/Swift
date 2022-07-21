@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="1557.9710144927537" y="128.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Upload View Controller-->
         <scene sceneID="FYp-6f-JSi">
             <objects>
-                <viewController id="Vir-nz-AZy" sceneMemberID="viewController">
+                <viewController id="Vir-nz-AZy" customClass="UploadViewController" customModule="FirebaseEx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H1v-BN-hwz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,18 +170,20 @@
                                 <color key="backgroundColor" red="0.19159602557340555" green="0.93686496087883298" blue="0.99942404029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLD-8K-GfP">
-                                <rect key="frame" x="66" y="418" width="259" height="40"/>
+                                <rect key="frame" x="66" y="428" width="259" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="画像をアップロードする">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnUpload:" destination="Vir-nz-AZy" eventType="touchUpInside" id="zpY-qG-RG0"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1rA-mf-Tqu">
-                                <rect key="frame" x="73" y="502" width="245" height="305"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ダウンロードURL" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1rA-mf-Tqu">
+                                <rect key="frame" x="73" y="497" width="245" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -191,6 +193,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="5wg-gd-OL5"/>
+                    <connections>
+                        <outlet property="imageView" destination="2YT-Ut-KiN" id="Pcl-iU-e4U"/>
+                        <outlet property="textView" destination="1rA-mf-Tqu" id="i5a-rf-Qt8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6o-XQ-5mB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

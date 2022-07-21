@@ -14,6 +14,7 @@
 		6AB0594D2872AE9C00BD1F5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB0594B2872AE9C00BD1F5E /* Main.storyboard */; };
 		6AB0594F2872AE9F00BD1F5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB0594E2872AE9F00BD1F5E /* Assets.xcassets */; };
 		6AB059522872AE9F00BD1F5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB059502872AE9F00BD1F5E /* LaunchScreen.storyboard */; };
+		6ABBA64F288982BD00E94450 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABBA64E288982BD00E94450 /* UploadViewController.swift */; };
 		6AD48A26287DA718006575C5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD48A25287DA718006575C5 /* ListViewController.swift */; };
 		73D1C4391F975E2765CDF55B /* Pods_FirebaseEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09FEACB90984E597B3BC320 /* Pods_FirebaseEx.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		6AB0594E2872AE9F00BD1F5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB059512872AE9F00BD1F5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AB059532872AE9F00BD1F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ABBA64E288982BD00E94450 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		6AD48A25287DA718006575C5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8F1879D84EF7BCF5F05549D0 /* Pods-FirebaseEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseEx.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseEx/Pods-FirebaseEx.debug.xcconfig"; sourceTree = "<group>"; };
 		AA8B45E412A4633EDBB01A8B /* Pods-FirebaseEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseEx.release.xcconfig"; path = "Target Support Files/Pods-FirebaseEx/Pods-FirebaseEx.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				6AB059472872AE9C00BD1F5E /* SceneDelegate.swift */,
 				6AB059492872AE9C00BD1F5E /* ViewController.swift */,
 				6AB0594B2872AE9C00BD1F5E /* Main.storyboard */,
+				6ABBA64E288982BD00E94450 /* UploadViewController.swift */,
 				6AD48A25287DA718006575C5 /* ListViewController.swift */,
 				6AB0594E2872AE9F00BD1F5E /* Assets.xcassets */,
 				6AB059502872AE9F00BD1F5E /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB0594A2872AE9C00BD1F5E /* ViewController.swift in Sources */,
+				6ABBA64F288982BD00E94450 /* UploadViewController.swift in Sources */,
 				6AB059462872AE9C00BD1F5E /* AppDelegate.swift in Sources */,
 				6AD48A26287DA718006575C5 /* ListViewController.swift in Sources */,
 				6AB059482872AE9C00BD1F5E /* SceneDelegate.swift in Sources */,
