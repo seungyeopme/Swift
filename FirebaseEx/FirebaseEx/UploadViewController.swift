@@ -35,6 +35,25 @@ class UploadViewController: UIViewController {
         //ユニークなファイル名を決める時に使用
         let timeStamp = Int( NSDate.timeIntervalSinceReferenceDate*1000 )
         let imageFileName = "idol" + String( timeStamp ) + ".png"
+        
+        let serverImageRef = storageRef.child( imageFileName )
+        
+        //メタデータ追加
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/png"
+        
+        let uploadTask = serverImageRef.putData(data!, metadata: metadata) {
+            //後行クローザー
+            (metadata, error) in
+            guard let metadata = metadata else {
+                
+                return
+            }
+            else {
+                print("アップロード成功")
+                self.textView.text.append("\nアップロード成功")
+            }
+        }
     }
     
 
