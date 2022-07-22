@@ -32,6 +32,9 @@ class UploadViewController: UIViewController {
         let data = imageView.image!.pngData()
         
         //タイムスタンプ: 1970年1月1日0時0分0秒を基準にミリセカンド単位の時間を表す整数
+        //ユニークなファイル名を決める時に使用
+        let timeStamp = Int( NSDate.timeIntervalSinceReferenceDate*1000 )
+        let imageFileName = "idol" + String( timeStamp ) + ".png"
     }
     
 
