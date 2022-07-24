@@ -45,16 +45,27 @@ class UploadViewController: UIViewController {
         let uploadTask = serverImageRef.putData(data!, metadata: metadata) {
             //後行クローザー
             (metadata, error) in
-            guard let metadata = metadata else {
-                
+            guard metadata != nil else {
+                print("アップロード失敗")
+                self.textView.text.append("\nアップロード失敗")
                 return
             }
-            else {
-                print("アップロード成功")
-                self.textView.text.append("\nアップロード成功")
+            
+            print("アップロード成功")
+            self.textView.text.append("\nアップロード成功")
+            
+            //download URL
+            serverImageRef.downloadURL() {
+                //後行クローザー
+                (url, error) in
+                guard let downloadURL = url else {
+                    return
+                }
+                self.textView.text.append("\n\(downloadURL.absoluteURL)")
+                print("downloadURL:", downloadURL.absoluteURL)
+                
+                //DBに書き込む機能を追加すればよい
             }
         }
     }
-    
-
 }
